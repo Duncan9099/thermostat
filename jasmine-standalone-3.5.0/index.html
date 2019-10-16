@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./index.css">
 
-    <script src="js/thermostat.js"></script>
-    <title>Thermostat</title>
-  </head>
-  <body>
-    <div class="grid-container">
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./index.css">
+  <script src="jquery.js"></script>
+  <script src="src/thermostat.js"></script>
+  <script src="src/index.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Thermostat</title>
+</head>
+
+<body>
+    <div><span id="temperature-current"></span></div>
       <h1 id="temperature"></h1>
       <p>
-        <button id="temperature-up"><i class="arrow up"></i></button>
-        <p id="temperature-down"><i class="arrow down"></i></p>
+        <button id="temperature-up">up</button>
+        <button id="temperature-down">down</button>
         <button id="temperature-reset">reset</button>
-        power saving mode is <span id="power-saving-status">on</span>
+        power saving mode is <span id="power-saving-status"></span>
         <button id="powersaving-on">PSM on</button>
         <button id="powersaving-off">PSM off</button>
       </p>
-    </div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
+  <div class="bg-warning" id="energy-usage-colour">
+    <span id="energy-usage"></span>
   </div>
-  </body>
+</body>
+
 </html>
