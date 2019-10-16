@@ -13,12 +13,17 @@
 </head>
 
 <body>
+    <center>
     <div><span id="temperature-current"></span></div>
       <h1 id="temperature"></h1>
       <p>
-        <button id="temperature-up">up</button>
-        <button id="temperature-down">down</button>
-        <button id="temperature-reset">reset</button>
+        <div
+          <button id="temperature-up">up</button>
+          <button id="temperature-down">down</button>
+        </div>
+        <div>
+          <button id="temperature-reset">reset</button>
+        </div>
         power saving mode is <span id="power-saving-status"></span>
         <button id="powersaving-on">PSM on</button>
         <button id="powersaving-off">PSM off</button>
@@ -26,6 +31,7 @@
   <div class="bg-warning" id="energy-usage-colour">
     <span id="energy-usage"></span>
   </div>
+  </center>
 </body>
 
 </html>
