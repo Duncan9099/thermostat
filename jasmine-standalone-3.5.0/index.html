@@ -3,35 +3,60 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="./index.css">
   <script src="jquery.js"></script>
   <script src="src/thermostat.js"></script>
   <script src="src/index.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="./index.css">
   <title>Thermostat</title>
 </head>
 
 <body>
-    <center>
-    <div><span id="temperature-current"></span></div>
-      <h1 id="temperature"></h1>
-      <p>
-        <div>
-          <button id="temperature-up">up</button>
-          <button id="temperature-down">down</button>
+  <div class="grid-container">
+    <div class="grid-item">
+      <h3>Current temperature: <span id="temperature"></span>&#8451</h3>
+      <h3>Current humidity: <span id="humidity"></span>%</h3>
+      <h3>Current air pressure: <span id="pressure"></span> mbar</h3>
+      <h3>Current weather: <span id="weather"></span></h3>
+      <select id="current-city">
+        <option value="london">London</option>
+        <option value="paris">Paris</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="vancouver">Vancouver</option>
+        <option value="hong kong">Hong Kong</option>
+        <option value="singapore">Singapore</option>
+        <option value="whistler">Whistler</option>
+      </select>
+    </div>
+    <br>
+    <div class="grid-item" id="top-right-block">
+      <p>Time: <span id="time"></span></p>
+      <p>Date: <span id="date"></span></p>
+    </div>
+    <br>
+    <div class="grid-item" id="thermostat">
+      <div class="nested">
+        <br>
+        <button style="font-size: 25px;" id="temperature-up">&uArr;</button>
+        <p></p>
+        <button style="font-size: 18px" id="temperature-reset">reset</button>
+        <div id="show-temperature">
+            <p class="display-temperature" style="font-size: 40px;"><span id="temperature-current"></span>&#8451;</p>
         </div>
-        <div>
-          <button id="temperature-reset">reset</button>
-        </div>
-        power saving mode is <span id="power-saving-status"></span>
-        <button id="powersaving-on">PSM on</button>
-        <button id="powersaving-off">PSM off</button>
-      </p>
-  <div class="bg-warning" id="energy-usage-colour">
-    <span id="energy-usage"></span>
+        <div class="nested-item">
+          <button id="powersaving-on">PSM on</button>
+          <button id="powersaving-off">PSM off</button>
+        </div><br>
+        <button style="font-size: 25px" id="temperature-down">&dArr;</button><br>
+      </div>
+    </div><br>
+    <div style="text-align: center;" class="grid-item"></div>
+      <p>Power saving mode is <span id="power-saving-status"></span></p>
+    <!-- <div class="bg-warning" id="energy-usage-colour">
+          <span id="energy-usage"></span>
+        </div> -->
+
   </div>
-  </center>
 </body>
 
 </html>
