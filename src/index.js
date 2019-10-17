@@ -1,6 +1,12 @@
 $(document).ready(function() {
   var thermostat = new Thermostat
 
+  function getTemperature() {
+    $.get('/temperature/get', function(data) {
+      // replace html element with data
+    });
+  };
+
   var checkEnergyUsage = function() {
     if (thermostat.viewEnergyUsage() === 'medium-usage') {
       return $("#energy-usage-colour").removeClass("bg-success").removeClass("bg-danger").addClass("bg-warning")
@@ -67,7 +73,7 @@ $(document).ready(function() {
     var city = $('#current-city').val();
     displayWeather(city)
     })
-  })
+
 
   function displayWeather(city) {
     var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city;
@@ -80,3 +86,5 @@ $(document).ready(function() {
       $('#weather').text(data.weather[0].main)
     })
   }
+
+});
