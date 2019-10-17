@@ -64,13 +64,14 @@ describe("thermostat", function() {
   describe("switchMode", function() {
     it("switches the power saving mode to off", function() {
       thermostat.switchMode()
-      expect(thermostat.getPowerSavingMode()).toEqual(false)
+      console.log(thermostat.getPowerSavingMode())
+      expect(thermostat.getPowerSavingMode()).toEqual("OFF")
     })
 
     it("switches back to false when pressed twice", function() {
       thermostat.switchMode()
       thermostat.switchMode()
-      expect(thermostat.getPowerSavingMode()).toEqual(true)
+      expect(thermostat.getPowerSavingMode()).toEqual("ON")
     })
   });
 
